@@ -1,0 +1,24 @@
+location            = "Australia East"
+resource_group_name = "koalatech-week08-rg"
+
+# Replace with a unique name for your Azure Container Registry
+acr_name             = "REPLACE_WITH_UNIQUE_ACR_NAME"
+# Replace with a unique name for your Azure Storage Account
+storage_account_name = "REPLACE_WITH_UNIQUE_STORAGE_NAME"
+
+# Replace with a unique name for your Azure Kubernetes Service cluster
+aks_cluster_name = "REPLACE_WITH_UNIQUE_AKS_NAME"
+aks_dns_prefix   = "koalatech"
+
+# 3 nodes required: staging and production both run persistent PostgreSQL workloads
+aks_node_count   = 3
+aks_node_vm_size = "Standard_D2s_v3"
+
+environment = "development"
+
+tags = {
+    Project     = "KoalaTech Course Platform"
+    ManagedBy   = "Terraform"
+    Practical   = "Week08"
+    Environment = "Development"
+}
